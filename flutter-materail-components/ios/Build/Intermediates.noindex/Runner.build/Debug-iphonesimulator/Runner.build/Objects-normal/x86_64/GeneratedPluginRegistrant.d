@@ -1,0 +1,19 @@
+dependencies: \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Runner/GeneratedPluginRegistrant.m \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Runner/GeneratedPluginRegistrant.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Modules/module.modulemap \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterTexture.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterPlugin.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterEngine.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterDartProject.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterBinaryMessenger.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterViewController.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterPlatformViews.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterChannels.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterCallbackCache.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterCodecs.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterMacros.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/FlutterAppDelegate.h \
+  /Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Flutter/Flutter.framework/Headers/Flutter.h

@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)"
+options: "b9d6ffaaf2ff671b1f9b6053979b4dc1"
+build_time: [1589965140, 356266000]
+inputs:
+  "/Users/mli/Desktop/longfor/flutter/flutter_cupertino_app/ios/Runner/AppDelegate.swift": [1588774831, 0]
