@@ -22,7 +22,12 @@ class _DateAndTimeState extends State<DateAndTime> {
                   context: context,
                   initialDate: DateTime.now(),
                   firstDate: DateTime(2020),
-                  lastDate: DateTime(2022)
+                  lastDate: DateTime(2022),
+                  selectableDayPredicate: (DateTime day) {
+                    return day.difference(DateTime.now()).inDays < 2;
+                  },
+//                locale: Locale('zh'), // 如果MaterialApp入口处声明了local这里就不需要了
+                helpText: "2020年的夏天",
               );
               print("result:\(result)");
             },
