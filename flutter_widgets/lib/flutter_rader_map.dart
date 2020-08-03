@@ -139,7 +139,7 @@ class MyPainter extends CustomPainter {
     Offset p5 = Offset(offsetLeft + sideWith * sin(1 / 5 * pi),
         offsetTop + sideWith * cos(1 / 5 * pi));
 
-    // 外部Line
+    /// 外部Line
     Offset p0 = Offset(offsetLeft, offsetTop);
     points..add(p1)..add(p2)..add(p3)..add(p4)..add(p5)..add(p1);
 
@@ -151,7 +151,7 @@ class MyPainter extends CustomPainter {
     canvas.drawLine(p0, p4, _paint);
     canvas.drawLine(p0, p5, _paint);
 
-    //内部Line
+    /// 内部Line
     for(int i = 1; i < 5; i ++) {
       List<Offset> insidePoints = List();
       double currentWith = sideWith / 5 * i;
@@ -174,6 +174,7 @@ class MyPainter extends CustomPainter {
         canvas.drawPoints(PointMode.polygon, insidePoints, _paint);
     }
 
+    /// 数据
     List<Offset> minPoints = List();
     double perWidth = sideWith / 5;
     Offset dataP1 = Offset(offsetLeft + perWidth * 2.8 * cos(1 / 10 * pi),
@@ -193,15 +194,31 @@ class MyPainter extends CustomPainter {
       ..add(dataP4)
       ..add(dataP5)
       ..add(dataP1);
-
+    /// 划线
     canvas.drawPoints(PointMode.polygon, minPoints, _paintMain);
+    /// 画点
+    double eWidth = size.width / 15;
+    double eHeight = size.height / 15;
+    canvas.drawCircle(_getOffsetWithOffSet(dataP1), min(eWidth / 2, eHeight / 2), _paintMain);
+    canvas.drawCircle(_getOffsetWithOffSet(dataP2), min(eWidth / 2, eHeight / 2), _paintMain);
+    canvas.drawCircle(_getOffsetWithOffSet(dataP3), min(eWidth / 2, eHeight / 2), _paintMain);
+    canvas.drawCircle(_getOffsetWithOffSet(dataP4), min(eWidth / 2, eHeight / 2), _paintMain);
+    canvas.drawCircle(_getOffsetWithOffSet(dataP5), min(eWidth / 2, eHeight / 2), _paintMain);
+    /// 绘制矩形
+      canvas.drawPath(
+        Path()
+        ..moveTo(dataP1.dx, dataP1.dy)..lineTo(dataP2.dx, dataP2.dy)
+        ..lineTo(dataP3.dx, dataP3.dy)..lineTo(dataP4.dx, dataP4.dy)
+        ..lineTo(dataP5.dx, dataP5.dy)
+        ..close(), _paint);
 
+  }
 
+  Offset _getOffsetWithOffSet(Offset offset) {
+    return Offset(offset.dx, offset.dy);
   }
 
   @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return null;
-  }
+  bool shouldRepaint(CustomPainter oldDelegate) => true;
 
 }
