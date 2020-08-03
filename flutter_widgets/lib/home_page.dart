@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/flutter_radar_chart.dart';
 import 'package:flutter_widgets/switchAndCheckBox.dart';
-import 'package:flutter_radar_chart/flutter_radar_chart.dart';
+import 'mp_chart/MPChartRadar.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -96,7 +96,59 @@ class _HomePageState extends State<HomePage> {
                     return flutter_radar_chart();
                   }));
 
-            }, child: Text("flutter_radar_chart")),
+            }, child: Text("flutter_radar_chart")
+            ),
+
+
+//            FlatButton(onPressed: () {
+//
+//              Navigator.push(context,
+//                MaterialPageRoute(builder: (context) {
+//                  return MPChartRadar();
+//                })
+//              );
+//            },child: Text("MPChartRadar"),),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) {
+                        return MPChartRadar();
+                      })
+                    );
+                  },
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 15.0),
+                  child: Container(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                      Text(
+                      "Redar Chart",
+                      textDirection: TextDirection.ltr,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(top: 10, bottom: 15),
+                      child: Text(
+                        "Simple web chart.",
+                        textDirection: TextDirection.ltr,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.red,
+                        ),
+                      ),
+                    ),
+                  ],
+                  ),
+                ),
+              ),
+            ),
 
           ],
         ),
