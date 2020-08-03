@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/flutter_radar_chart.dart';
 import 'package:flutter_widgets/flutter_rader_map.dart';
+import 'package:flutter_widgets/flutter_spider_view.dart';
 import 'package:flutter_widgets/switchAndCheckBox.dart';
 import 'mp_chart/MPChartRadar.dart';
 
@@ -30,6 +31,7 @@ class _HomePageState extends State<HomePage> {
       ),
       backgroundColor: Colors.white,
       body: Container(
+        width: double.infinity,
         child: new Column(
           children: <Widget>[
             FlatButton(onPressed: () async {
@@ -71,31 +73,31 @@ class _HomePageState extends State<HomePage> {
                 )
             ),
 
-            TextField(
-              autofocus: true, //自动对焦
-              decoration: InputDecoration(
-                labelText: "用户名",
-                hintText: "请填写用户名",
-                prefixIcon: Icon(Icons.person)
-              ),
-              controller: _nameController,
-            ),
-
-            TextField(
-              obscureText: true, //加密模式
-              decoration: InputDecoration(
-                labelText: "密码",
-                hintText: "请输入密码",
-                prefixIcon: Icon(Icons.lock)
-              ),
-            ),
+//            TextField(
+//              autofocus: true, //自动对焦
+//              decoration: InputDecoration(
+//                labelText: "用户名",
+//                hintText: "请填写用户名",
+//                prefixIcon: Icon(Icons.person)
+//              ),
+//              controller: _nameController,
+//            ),
+//
+//            TextField(
+//              obscureText: true, //加密模式
+//              decoration: InputDecoration(
+//                labelText: "密码",
+//                hintText: "请输入密码",
+//                prefixIcon: Icon(Icons.lock)
+//              ),
+//            ),
   
-            FlatButton(onPressed: () {
-
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) {
-                    return flutter_radar_chart();
-                  }));
+            FlatButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) {
+                        return flutter_radar_chart();
+                      }));
 
             }, child: Text("flutter_radar_chart")
             ),
@@ -109,35 +111,41 @@ class _HomePageState extends State<HomePage> {
 //                })
 //              );
 //            },child: Text("MPChartRadar"),),
-              InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) {
-                        return MPChartRadar();
-                      })
-                    );
-                  },
-                child: Text(
-                  "Redar Chart",
-                  textDirection: TextDirection.ltr,
-                  textAlign: TextAlign.center,
-                ),
-            ),
+//              InkWell(
+//                onTap: () {
+//                  Navigator.push(context,
+//                      MaterialPageRoute(builder: (context) {
+//                        return MPChartRadar();
+//                      })
+//                    );
+//                  },
+//                child: Text(
+//                  "Redar Chart",
+//                  textDirection: TextDirection.ltr,
+//                  textAlign: TextAlign.center,
+//                ),
+//            ),
 
-            Container(
-              height: 20,
-              color: Colors.red,
-            ),
-
-            InkWell(
-              onTap: () {
+            FlatButton(
+              onPressed: () {
                 Navigator.push(context,
                   MaterialPageRoute(builder: (context) {
                     return Flutter_Radar_Map();
                   })
                 );
               },
-              child: Text("flutter_radar_map"),
+              child: Text("Flutter_Radar_Map"),
+            ),
+
+            FlatButton(
+              onPressed: () {
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) {
+                    return FlutterSpiderView();
+                  })
+                );
+              },
+              child: Text("FlutterSpiderView"),
             )
           ],
         ),

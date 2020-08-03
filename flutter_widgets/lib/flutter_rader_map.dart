@@ -204,6 +204,18 @@ class MyPainter extends CustomPainter {
     canvas.drawCircle(_getOffsetWithOffSet(dataP3), min(eWidth / 2, eHeight / 2), _paintMain);
     canvas.drawCircle(_getOffsetWithOffSet(dataP4), min(eWidth / 2, eHeight / 2), _paintMain);
     canvas.drawCircle(_getOffsetWithOffSet(dataP5), min(eWidth / 2, eHeight / 2), _paintMain);
+    /// 绘制文字
+    ParagraphBuilder pb = ParagraphBuilder(ParagraphStyle(
+      textAlign: TextAlign.center,
+      fontWeight: FontWeight.w200,
+      fontStyle: FontStyle.normal,
+      fontSize: 12,
+    ))
+    ..addText("66");
+    ParagraphConstraints pc = ParagraphConstraints(width: 30);
+    Paragraph paragraph = pb.build()..layout(pc);
+    canvas.drawParagraph(paragraph, _getOffsetWithOffSet(dataP1));
+
     /// 绘制矩形
       canvas.drawPath(
         Path()
