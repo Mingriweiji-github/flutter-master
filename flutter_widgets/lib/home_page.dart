@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/flutter_radar_chart.dart';
 import 'package:flutter_widgets/flutter_rader_map.dart';
@@ -151,19 +152,46 @@ class _HomePageState extends State<HomePage> {
             FlatButton(
               onPressed: () {
                 showConfirmDialog();
-//                showDialogWithAnimation();
               },
-              child: Text("AlertDialog"),
+              child: Text("Flutter AlertDialog"),
             ),
 
+            FlatButton(
+              onPressed: () {
+                showDialogWithAnimation();
+              },
+              child: Text("Flutter Dialog Animation"),
+            ),
 
+            FlatButton(
+              onPressed: () {
+                showIOSDialogStyle(context);
+              },
+              child: Text("iOS style Dialog"),
+            ),
 
           ],
         ),
       ),
     );
   }
-
+  /// iOS style
+  void showIOSDialogStyle(BuildContext context) {
+    showDialog(
+        context: context,
+        child: CupertinoAlertDialog(
+          title: Text("说明",style: TextStyle(fontSize: 14),),
+          content: Text("1、实现代码很简单，不在赘述。\n2、唯一需要注意的是我们是通过Navigator.of(context).pop(…)方法来关闭对话框的\n3、这和路由返回的方式是一致的，并且都可以返回一个结果数据。现在，对话框我们已经构建好了，那么如何将它弹出来呢？\n4、还有对话框返回的数据应如何被接收呢？这些问题的答案都在showDialog()方法中。"),
+          actions: <Widget>[
+            CupertinoDialogAction(
+                isDefaultAction: true,
+                child: Text("确定", style: TextStyle(fontSize: 16)),
+                onPressed: () => Navigator.of(context).pop(),
+            ),
+          ],
+        )
+    );
+  }
   ///弹出对话窗
   Future<bool> showConfirmDialog() {
     return showDialog<bool>(

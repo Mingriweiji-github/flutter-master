@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_widgets/FallbackCupertinoLocalisationsDelegate.dart';
 import 'package:flutter_widgets/home_page.dart';
 
 void main() {
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate
+        GlobalWidgetsLocalizations.delegate,
+        const FallbackCupertinoLocalisationsDelegate(),
       ],
       supportedLocales: [
         const Locale("zh", "CH"),
